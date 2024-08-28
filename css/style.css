@@ -14,6 +14,7 @@
     src: url('../fonts/roboto-v32-cyrillic_latin-700.woff2') format('woff2');
 }
 
+/* Общие стили */
 * {
     box-sizing: border-box;
 }
@@ -48,8 +49,20 @@ body {
 .btn-primary {
     background-color: rgb(37, 110, 235);
     color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.btn-primary:hover {
+    background-color: rgb(31, 94, 200);
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-large {
+    padding: 19px 71px;
+}
+
+/* Шапка сайта */
 .header {
     padding-top: 30px;
     padding-bottom: 24px;
@@ -66,6 +79,8 @@ body {
     align-items: center;
     justify-content: flex-start;
     gap: 6px;
+    text-decoration: none;
+    color: inherit;
 }
 
 .header-logo span {
@@ -80,15 +95,286 @@ body {
     height: 30px;
 }
 
+/* Секция поиска */
+.search {
+    margin-bottom: 45px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(37, 110, 235);
+    padding: 3px;
+}
+
+.search-box input {
+    min-width: 0;
+    flex-grow: 1;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 14px 22px;
+}
+
+.search-btn {
+    display: flex;
+    align-items: center;
+}
+
+.search-btn .search-btn__text {
+    margin-left: 5px;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.search-btn .search-btn {
+    width: 15px;
+    height: 15px;
+}
+
+/* Секция "Рекомендации для вас" */
+.content {
+    padding-bottom: 50px;
+}
+
+.content-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.content-main {
+    flex-grow: 1;
+}
+
+.content-main__title {
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.content-main__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.content-main__list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc((100% - 60px) / 3);
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease-in-out;
+}
+
+.content-main__list-item:hover {
+    transform: scale(1.05);
+}
+
+.content-main__list-item--image {
+    margin-bottom: 12px;
+    width: 100%;
+    display: flex;
+}
+
+.content-main__list-item--image img {
+    width: 100%;
+}
+
+.content-main__list-item--title {
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.content-main__list-item:hover .content-main__list-item--title {
+    color: rgb(37, 110, 235);
+}
+
+.content-main__list-item--price {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.content-main__list-item--desc {
+    font-size: 14px;
+    line-height: 16px;
+    color: rgb(196, 196, 196);
+    margin-bottom: 4px;
+}
+
+.content-main__list-item--desc:last-child {
+    margin-bottom: 0;
+}
+
+/* Секция "Сервисы и услуги */
+.content-side {
+    width: 260px;
+    min-width: 260px;
+}
+
+.content-side__title {
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 0;
+    margin-bottom: 23px;
+}
+
+.content-side__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 25px;
+    border-bottom: 1px solid rgb(229, 229, 229);
+    padding-bottom: 36px;
+    margin-bottom: 36px;
+}
+
+.content-side__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.content-side__item--img {
+    margin-bottom: 7px;
+}
+
+.content-side__item--title {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.content-side__item--text {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+}
+
+.content-side__footer {
+    font-size: 14px;
+    line-height: 16px;
+    color: rgb(196, 196, 196);
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.content-side__footer--text {
+    margin: 0;
+}
+
+.content-side__footer--link {
+    color: inherit;
+}
+
+.content-side__footer--link:hover {
+    color: rgb(37, 110, 235);
+}
+
+/* Продуктовая страница */
+.content-product {
+    display: flex;
+    flex-grow: 1;
+    gap: 30px;
+}
+
+.content-product__left {
+    flex-basis: 60%;
+}
+
+.content-product__image {
+    width: 100%;
+    min-width: 270px;
+    margin-bottom: 20px;
+}
+
+.content-product__right {
+    flex-basis: 40%;
+}
+
+.content-product__title, .content-product__price {
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.content-product__text {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+}
+
+/* Адаптив */
 @media (max-width: 1200px) {
     .container {
         max-width: 930px;
+    }
+
+    .content-main__list-item {
+        width: calc((100% - 30px) / 2);
+    }
+
+    .btn-large {
+        padding: 15px 40px;
+        font-size: 14px;
     }
 }
 
 @media (max-width: 991px) {
     .container {
         max-width: 730px;
+    }
+
+    .content-box {
+        flex-direction: column;
+    }
+
+    .content-main {
+        width: 100%;
+    }
+
+    .content-side {
+        width: 100%;
+        min-width: none;
+    }
+
+    .content-product {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .content-product__left {
+        flex-basis: 100%;
+        max-width: 460px;
+        margin: 0 auto;
+    }
+
+    .content-product__title, .content-product__price {
+        text-align: center;
+    }
+
+    .content-product__right {
+        flex-basis: 100%;
+        max-width: 460px;
+        margin: 0 auto;
     }
 }
 
@@ -103,5 +389,23 @@ body {
 
     .header-burger {
         display: block;
+    }
+
+    .search-btn .search-btn__text {
+        display: none;
+    }
+
+    .btn-large {
+        padding: 19px 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-main__list-item {
+        width: 100%;
+    }
+
+    .content-product__title, .content-product__price {
+        font-size: 20px;
     }
 }

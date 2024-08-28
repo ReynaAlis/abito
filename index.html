@@ -12,10 +12,10 @@
     <header class="header">
         <div class="container">
             <div class="header-box">
-                <div class="header-logo">
+                <a class="header-logo" href="/">
                     <img src="image/logo.svg" alt="Логотип Abito">
                     <span>Abito</span>
-                </div>
+                </a>
                 <div class="header-controls">
                     <button class="btn btn-outline">Вход и регистрация</button>
                     <button class="btn btn-primary">Подать объявление</button>
@@ -27,8 +27,119 @@
             </div>
         </div>
     </header>
-    <div class="search"></div>
-    <main></main>
+
+    <main>
+        <section class="search">
+            <div class="container">
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск по объявлениям">
+                    <button class="btn btn-primary search-btn">
+                        <img class="search-btn__icon" src="image/search.svg" alt="Значок поиска">
+                        <span class="search-btn__text">Найти</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="container">
+                <div class="content-box">
+                    <div class="content-main">
+                        <h2 class="content-main__title">Рекомендации для вас</h2>
+                        <div class="content-main__list">
+                            <a class="content-main__list-item" href="product.html">
+                                <div class="content-main__list-item--image">
+                                    <img src="image/default-image.jpeg" alt="">
+                                </div>
+                                <h3 class="content-main__list-item--title">Пвх материал 2й сорт</h3>
+                                <strong class="content-main__list-item--price">170 ₽</strong>
+                                <span class="content-main__list-item--desc">Казань, р-н Вахитовский</span>
+                                <span class="content-main__list-item--desc">10 июля 11:39</span>
+                            </a>
+                            <a class="content-main__list-item" href="product.html">
+                                <div class="content-main__list-item--image">
+                                    <img src="image/default-image.jpeg" alt="">
+                                </div>
+                                <h3 class="content-main__list-item--title">Пвх материал 2й сорт</h3>
+                                <strong class="content-main__list-item--price">170 ₽</strong>
+                                <span class="content-main__list-item--desc">Казань, р-н Вахитовский</span>
+                                <span class="content-main__list-item--desc">10 июля 11:39</span>
+                            </a>
+                            <a class="content-main__list-item" href="product.html">
+                                <div class="content-main__list-item--image">
+                                    <img src="image/default-image.jpeg" alt="">
+                                </div>
+                                <h3 class="content-main__list-item--title">Пвх материал 2й сорт</h3>
+                                <strong class="content-main__list-item--price">170 ₽</strong>
+                                <span class="content-main__list-item--desc">Казань, р-н Вахитовский</span>
+                                <span class="content-main__list-item--desc">10 июля 11:39</span>
+                            </a>
+                            <a class="content-main__list-item" href="product.html">
+                                <div class="content-main__list-item--image">
+                                    <img src="image/default-image.jpeg" alt="">
+                                </div>
+                                <h3 class="content-main__list-item--title">Пвх материал 2й сорт</h3>
+                                <strong class="content-main__list-item--price">170 ₽</strong>
+                                <span class="content-main__list-item--desc">Казань, р-н Вахитовский</span>
+                                <span class="content-main__list-item--desc">10 июля 11:39</span>
+                            </a>
+                            <a class="content-main__list-item" href="product.html">
+                                <div class="content-main__list-item--image">
+                                    <img src="image/default-image.jpeg" alt="">
+                                </div>
+                                <h3 class="content-main__list-item--title">Пвх материал 2й сорт</h3>
+                                <strong class="content-main__list-item--price">170 ₽</strong>
+                                <span class="content-main__list-item--desc">Казань, р-н Вахитовский</span>
+                                <span class="content-main__list-item--desc">10 июля 11:39</span>
+                            </a>
+                            <a class="content-main__list-item" href="product.html">
+                                <div class="content-main__list-item--image">
+                                    <img src="image/default-image.jpeg" alt="">
+                                </div>
+                                <h3 class="content-main__list-item--title">Пвх материал 2й сорт</h3>
+                                <strong class="content-main__list-item--price">170 ₽</strong>
+                                <span class="content-main__list-item--desc">Казань, р-н Вахитовский</span>
+                                <span class="content-main__list-item--desc">10 июля 11:39</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-side">
+                        <h3 class="content-side__title">Сервисы и услуги</h3>
+
+                        <div class="content-side__box">
+                            <div class="content-side__list">
+                                <div class="content-side__item">
+                                    <img class="content-side__item--img" src="image/delivery.svg" alt="Доставка">
+                                    <h4 class="content-side__item--title">Доставка</h4>
+                                    <p class="content-side__item--text">Проверка при получении и возможность бесплатно
+                                        вернуть товар</p>
+                                </div>
+                                <div class="content-side__item">
+                                    <img class="content-side__item--img" src="image/sedan.svg" alt="Автотека">
+                                    <h4 class="content-side__item--title">Автотека</h4>
+                                    <p class="content-side__item--text">Отчёт с историей авто: пробег, владельцы,
+                                        сведения о залоге, ДТП и ремонтах</p>
+                                </div>
+                                <div class="content-side__item">
+                                    <img class="content-side__item--img" src="image/booking.svg"
+                                        alt="Онлайн-бронирование жилья">
+                                    <h4 class="content-side__item--title">Онлайн-бронирование жилья</h4>
+                                    <p class="content-side__item--text">Посуточная аренда квартир и домов: большой выбор
+                                        вариантов для поездок по России</p>
+                                </div>
+                            </div>
+
+                            <div class="content-side__footer">
+                                <p class="content-side__footer--text">© ООО «Абито», 2011–2021</p>
+                                <a class="content-side__footer--link" href="#!">Политика конфиденциальности</a>
+                                <a class="content-side__footer--link" href="#!">Обработка данных</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
