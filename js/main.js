@@ -78,8 +78,9 @@ const render = (cardList) => {
 };
 
 const filteredArray = (array, value) => {
+    const normalizedValue = value.trim().toLowerCase();
     return array.filter((item) => {
-        return item.title.includes(value) || item.price.includes(value);
+        return item.title.toLowerCase().includes(normalizedValue) || item.price.toLowerCase().includes(normalizedValue);
     });
 };
 
@@ -88,6 +89,20 @@ cardWrapper.style.gap = '30px';
 
 render(cardArray);
 
-searchBtn.addEventListener('click', () => {
+searchInput.addEventListener('input', () => {
+    if (searchInput.value.trim() === '') {  
+        render(cardArray); 
+    }
+});
+
+searchInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        render(filteredArray(cardArray, searchInput.value));
+    }
+});
+
+searchBtn.addEventListener('click', (event) => {
+    event.preventDefault();
     render(filteredArray(cardArray, searchInput.value));
-})
+});
